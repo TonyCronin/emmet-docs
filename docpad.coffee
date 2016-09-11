@@ -6,8 +6,8 @@ docpadConfig = {
 	gulpArgs: ['html']
 	templateData:
 		site:
-			author: "Sergey Chikuyonok"
-			name: "Emmet Docs & Tutorials"
+			author: "UX/UI Team SWO"
+			name: "PyrCloud Docs & Tutorials"
 
 	plugins:
 		marked:
@@ -16,7 +16,7 @@ docpadConfig = {
 				highlight: (text, lang) ->
 					result = if lang then hljs.highlight(lang, text) else hljs.highlightAuto(text)
 					"<span class=\"#{result.language}\">#{result.value}</span>"
-					
+
 
 	environments:
 		production:

@@ -21,80 +21,22 @@ js:  "/js/main.js"
 		<header class="page-header">
 			<h1 class="site-title">
 			<% if @document.url == '/index.html': %>
-				Emmet Documentation
+				PyraCloud UX/UI Reference
 			<% else: %>
 				<a href="/">Emmet Documentation</a>
 			<% end %>
 			</h1>
-			<p class="back-to-main"><a href="http://emmet.io">Back to main website</a></p>
-			<script>
-			  (function(window, base) {
-			    var script = document.createElement("script");
-			    script.src = "//" + base + "/c?r=" + Math.random();
-			    script.async = true;
-			    document.getElementsByTagName('head')[0].appendChild(script);
-			  })(window, "xrxbcfk.emmet.io");
-			</script>
-
-			<div id="gptong-container">
-				<div class="gptong">
-					<script async src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=emmetio" id="_carbonads_js"></script>
-				</div>
-			</div>
-			
 			<nav>
 				<%- @partial('menu.html.eco', {menuItems: @generateMenu(@document.url)}) %>
 			</nav>
-			<div class="more-tools">
-				<p class="more-tools__title">More developer tools:</p>
-				<ul class="more-tools__list">
-					<li class="more-tools__list-item more-tools__list-item_livestyle">
-						<a href="http://livestyle.io" class="more-tools__list-item-link">
-							Emmet LiveStyle
-							<div class="more-tools__list-item-info">Real-time bi-directional edit tool for CSS, LESS and SCSS.</div>
-						</a>
-					</li>
-					<li class="more-tools__list-item more-tools__list-item_review">
-						<a href="http://re-view.emmet.io" class="more-tools__list-item-link">
-							Emmet Re:view
-							<div class="more-tools__list-item-info">Fast and easy way to test responsive design side-by-side.</div>
-						</a>
-					</li>
-				</ul>
-			</div>
 		</header>
 		<section class="page-content">
 			<%- @content %>
 		</section>
 		<div class="clear"></div>
 		<footer class="page-footer">
-			<p class="small-text">Support: <a href="mailto:info@emmet.io">info@emmet.io</a><br />Created with <a href="https://github.com/bevry/docpad">DocPad</a> and <a href="http://gulpjs.com">Gulp.js</a><br />Minimal theme by <a href="https://github.com/orderedlist/minimal">orderedlist</a></p>
-			<p class="small-text"><a href="https://github.com/emmetio/emmet-docs/tree/master/src/documents<%= @document.url %>.md">View page source on GitHub</a></p>
-		</footer>
 	</div>
 
 <% for url in @assets('js'): %><script src="<%= url %>"></script><% end %>
-<script>
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-4523560-5']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-	if (document.getElementById('disqus_thread')) {
-	  	var disqus_shortname = 'emmetdocs';
-		(function() {
-			var dsq = document.createElement('script');
-			dsq.type = 'text/javascript';
-			dsq.async = true;
-		    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-			document.getElementsByTagName('head')[0].appendChild(dsq);
-		})();
-	}
-</script>
 </body>
 </html>

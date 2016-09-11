@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Filters
-menuOrder: 4
+menuOrder: 5
 ---
 Filters are special post-processors that modify expanded abbreviation right before output to the editor. To better understand how filters work, let’s walk through a simple tutorial.
 
@@ -57,7 +57,7 @@ Default filters are defined in [snippets.json](https://github.com/emmetio/emmet/
 	}
 
 If there’s no such section, `html` filter is applied by default. If you want to apply more than one filter by default, you can write a comma- or pipe-separated list of filter names in `filters` section:
-	
+
 	{
 		...
 		"html": {
@@ -79,7 +79,7 @@ HAML syntax filter: output abbreviation as HAML template. Applies by default for
 HTML syntax filter: outputs abbreviation as HTML/XML tags. Applies by default everywhere except HAML files.
 
 ### Escape: `e`
-Escapes XML-unsafe characters: `<`, `>` and `&`. 
+Escapes XML-unsafe characters: `<`, `>` and `&`.
 
 For example, `div#header|e` will be expanded into `&lt;div id="header"&gt;&lt;/div&gt;`. This filter will be extremely useful for tech bloggers/writers who wants to show code snippets on website (if you add Emmet support into you CMS, of course).
 
@@ -98,7 +98,7 @@ Add comments around important tags. By default, “important tags” are those t
 		</div>
 		<!-- /#page -->
 	</div>
-	
+
 This filter has a number of [preferences](/customization/preferences/) you can re-define:
 
 * `filter.commentTrigger`: list of attributes that should trigger comment output. Default value is `id, class`
@@ -108,9 +108,9 @@ This filter has a number of [preferences](/customization/preferences/) you can r
 ### XSL tuning: `xsl`
 This filter removes `select` attribute from `<xsl:variable>` and `<xsl:with-param>` tags _if they have child nodes_. For example:
 
-	ap>wp 
+	ap>wp
 
-will be expanded into 
+will be expanded into
 
 	<xsl:apply-templates select="" mode="">
 		<xsl:with-param name="" select=""/>
@@ -139,8 +139,7 @@ Outputs transformed abbreviation as a single line of code. Useful for writing te
 ...will be expanded into
 
 	<ul><li></li><li></li><li></li><li></li></ul>
-	
+
 ### Trim line markers: `t`
 
 Useful for wrapping abbreviations only: removes line markers from wrapped lines, as described in “[Wrap with Abbreviation](/actions/wrap-with-abbreviation/)” action.
-

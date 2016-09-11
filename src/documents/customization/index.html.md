@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Customization
-menuOrder: 5
+menuOrder: 6
 ---
 Emmet offers wide range of tweaks you can use to fine-tune your plugin experience. Almost all officially developed editor plugins (except PSPad and browser-based) has **extensions support**: a special folder where you can put `json` and `js` files to extend Emmet. Please refer to README file bundled with your editor’s plugin to find out where Emmet looks for extensions.
 

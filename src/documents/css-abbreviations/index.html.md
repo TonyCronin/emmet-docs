@@ -1,7 +1,7 @@
 ---
 layout: page
 title: CSS Abbreviations
-menuOrder: 2
+menuOrder: 3
 ---
 While Emmet abbreviations are good for generating HTML, XML or any other structured markup, it may look useless for CSS. You don’t want to write CSS selectors and transform them to CSS selectors, right? The only thing Emmet can do for you is to provide shorthands for CSS properties, but editors with native snippets and autocomplete can help you way better.
 
@@ -19,7 +19,7 @@ Here’s what happens when you expand `m10` abbreviation.
 
 First, it looks for a `m10` snippet definition in `snippets.json`. If it’s found, it simply outputs it as a regular snippet. Otherwise, it _extracts value_ from abbreviation.
 
-To provide best user experience, resolver doesn’t introduce any special value separator: it’s much faster to type `m5` rather than `m:5`. So it needs to find a value bound: *a first occurrence of digit or hyphen is treated as a value bound*. In `m10` example, `m` is _property part_ and `10` is _value part_. 
+To provide best user experience, resolver doesn’t introduce any special value separator: it’s much faster to type `m5` rather than `m:5`. So it needs to find a value bound: *a first occurrence of digit or hyphen is treated as a value bound*. In `m10` example, `m` is _property part_ and `10` is _value part_.
 
 When property part is found, resolver searches for the snippet definition in `snippets.json`. For an `m` part, it will find `"m": "margin:|;"` definition (`|` character is used as a caret position reference when the snippet is expanded).
 
