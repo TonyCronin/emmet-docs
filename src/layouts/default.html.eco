@@ -19,13 +19,13 @@ js:  "/js/main.js"
 <body>
 	<div class="wrapper">
 		<header class="page-header">
-			<h1 class="site-title">
+			<h3 class="site-title">
 			<% if @document.url == '/index.html': %>
 				PyraCloud UX/UI Reference
 			<% else: %>
-				<a href="/">Emmet Documentation</a>
+				<a href="/">PryraCloud UX/UI Documentation</a>
 			<% end %>
-			</h1>
+		  </h3>
 			<nav>
 				<%- @partial('menu.html.eco', {menuItems: @generateMenu(@document.url)}) %>
 			</nav>
