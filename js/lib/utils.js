@@ -76,7 +76,7 @@ export function matchesSelector(elem, sel) {
 		// no native `matches` method, use a shim
 		let matches = (elem.document || elem.ownerDocument).querySelectorAll(sel);
 		let i = 0;
-  
+
 		while (matches[i] && matches[i] !== elem) {
 			i++;
 		}
@@ -111,7 +111,7 @@ var createEscaper = function(map) {
 		return map[match];
 	};
 
- 
+
 	var source = '(?:' + Object.keys(map).join('|') + ')';
 	var testRegexp = RegExp(source);
 	var replaceRegexp = RegExp(source, 'g');

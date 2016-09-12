@@ -21,9 +21,9 @@ js:  "/js/main.js"
 		<header class="page-header">
 			<h3 class="site-title">
 			<% if @document.url == '/index.html': %>
-				PyraCloud UX/UI Reference
+				UX/UI Reference
 			<% else: %>
-				<a href="/">PryraCloud UX/UI Documentation</a>
+				<a href="/">UX/UI Documentation</a>
 			<% end %>
 		  </h3>
 			<nav>

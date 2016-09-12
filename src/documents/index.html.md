@@ -1,5 +1,5 @@
 ---
 layout: default
-title: PyraCloud UX/UI Documentation
+title: UX/UI Documentation
 ---
 # Enjoy #
